@@ -24,7 +24,7 @@ if len(news)!=0:
 '''
 # check multiple clicks
 password = st.text_input(placeholder='', label='passkey')
-if password == st.secrets['password']:
+if password == st.secrets['some_section']['password']:
    df = pd.DataFrame({'test':['csv1']})
    df1 = pd.DataFrame({'test':['csv1']})
 
