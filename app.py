@@ -7,20 +7,21 @@ msft = yf.Ticker('^GSPC')
 info = msft.info
 low = info['fiftyTwoWeekLow']
 print('Extracted: ', low)
-news=msft.news
-css='''
+#news=msft.news
+#css=
+'''
 <style>
 .banner {
    Width:970px;
    Height:250px;
 }
 <style>
-'''
+
 if len(news)!=0:
     news1=news[-1]
     ref_news='Latest Headline: \n'+news1['title']
     st.info(ref_news, icon='📰')
-
+'''
 # check multiple clicks
 password = st.text_input(placeholder='', label='passkey')
 if password == st.secrets['password']:
